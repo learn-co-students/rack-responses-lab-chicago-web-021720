@@ -2,8 +2,7 @@ class Application
     def call(env)
         resp = Rack::Response.new
 
-        time = Time.now 
-        hour = time.strftime("%k").to_i
+        hour = Time.now.strftime("%k").to_i
 
 
         if hour >= 12
